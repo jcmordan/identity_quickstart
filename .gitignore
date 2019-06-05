@@ -1,0 +1,6 @@
+
+
+bin\**
+obj\**
+
+src/JSClient/node_modules/
