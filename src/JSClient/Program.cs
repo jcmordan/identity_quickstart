@@ -14,11 +14,14 @@ namespace JSClient
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine(Directory.GetCurrentDirectory());
             CreateWebHostBuilder(args).Build().Run();
+
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>();
     }
 }

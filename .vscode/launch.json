@@ -1,143 +1,140 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        // {
-        //     "name": ".NET(console)",
-        //     "type": "coreclr",
-        //     "request": "launch",
-        //     "preLaunchTask": "build",
-        //     "program": "${workspaceFolder}/src/Client/bin/Debug/netcoreapp2.2/Client.dll",
-        //     "args": [],
-        //     "cwd": "${workspaceFolder}",
-        //     "stopAtEntry": false,
-        //     "console": "internalConsole"
-        // },
-        // {
-        //     "name": ".NET(console RO)",
-        //     "type": "coreclr",
-        //     "request": "launch",
-        //     "preLaunchTask": "build",
-        //     "program": "${workspaceFolder}/src/Client.RO/bin/Debug/netcoreapp2.2/Client.RO.dll",
-        //     "args": [],
-        //     "cwd": "${workspaceFolder}",
-        //     "stopAtEntry": false,
-        //     "console": "internalConsole"
-        // },
-        {
-            "name": ".NET(Identity)",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/IdentityServer/bin/Debug/netcoreapp2.1/IdentityServer.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/src/IdentityServer",
-            "stopAtEntry": false,
-            "launchBrowser": {
-                "enabled": false
-            },
-            "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development",
-                "ASPNETCORE_URLS": "http://localhost:5000"
-            },
-            "sourceFileMap": {
-                "/Views": "${workspaceFolder}/Views"
-            }
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    // {
+    //     "name": ".NET(console)",
+    //     "type": "coreclr",
+    //     "request": "launch",
+    //     "preLaunchTask": "build",
+    //     "program": "${workspaceFolder}/src/Client/bin/Debug/netcoreapp2.2/Client.dll",
+    //     "args": [],
+    //     "cwd": "${workspaceFolder}",
+    //     "stopAtEntry": false,
+    //     "console": "internalConsole"
+    // },
+    // {
+    //     "name": ".NET(console RO)",
+    //     "type": "coreclr",
+    //     "request": "launch",
+    //     "preLaunchTask": "build",
+    //     "program": "${workspaceFolder}/src/Client.RO/bin/Debug/netcoreapp2.2/Client.RO.dll",
+    //     "args": [],
+    //     "cwd": "${workspaceFolder}",
+    //     "stopAtEntry": false,
+    //     "console": "internalConsole"
+    // },
+    {
+      "name": ".NET(Identity)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/IdentityServer/bin/Debug/netcoreapp2.1/IdentityServer.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/IdentityServer",
+      "stopAtEntry": false,
+      "launchBrowser": {
+        "enabled": false
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:5000"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    },
+    {
+      "name": ".NET(Api)",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/Api/bin/Debug/netcoreapp2.2/Api.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/Api",
+      "stopAtEntry": false,
+      "launchBrowser": {
+        "enabled": false,
+        "args": "${auto-detect-url}",
+        "windows": {
+          "command": "cmd.exe",
+          "args": "/C start ${auto-detect-url}"
         },
-        {
-            "name": ".NET(Api)",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/Api/bin/Debug/netcoreapp2.2/Api.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/src/Api",
-            "stopAtEntry": false,
-            "launchBrowser": {
-                "enabled": false,
-                "args": "${auto-detect-url}",
-                "windows": {
-                    "command": "cmd.exe",
-                    "args": "/C start ${auto-detect-url}"
-                },
-                "osx": {
-                    "command": "open"
-                },
-                "linux": {
-                    "command": "xdg-open"
-                }
-            },
-            "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development",
-                "ASPNETCORE_URLS": "http://localhost:5001"
-            },
-            "sourceFileMap": {
-                "/Views": "${workspaceFolder}/Views"
-            }
+        "osx": {
+          "command": "open"
         },
-        {
-            "name": ".NET(MVC Client)",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/Mvc.Client/bin/Debug/netcoreapp2.2/Mvc.Client.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/src/Api",
-            "stopAtEntry": false,
-            "launchBrowser": {
-                "enabled": false,
-                "args": "${auto-detect-url}",
-                "windows": {
-                    "command": "cmd.exe",
-                    "args": "/C start ${auto-detect-url}"
-                },
-                "osx": {
-                    "command": "open"
-                },
-                "linux": {
-                    "command": "xdg-open"
-                }
-            },
-            "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development",
-                "ASPNETCORE_URLS": "http://localhost:5002"
-            },
-            "sourceFileMap": {
-                "/Views": "${workspaceFolder}/Views"
-            }
+        "linux": {
+          "command": "xdg-open"
+        }
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:5001"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    },
+    {
+      "name": ".NET(MVC Client)",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/Mvc.Client/bin/Debug/netcoreapp2.2/Mvc.Client.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/Mvc.Client",
+      "stopAtEntry": false,
+      "launchBrowser": {
+        "enabled": false,
+        "args": "${auto-detect-url}",
+        "windows": {
+          "command": "cmd.exe",
+          "args": "/C start ${auto-detect-url}"
         },
-        {
-            "name": ".NET(JS Client)",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/JSClient/bin/Debug/netcoreapp2.2/JSClient.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/src/Api",
-            "stopAtEntry": false,
-            "launchBrowser": {
-                "enabled": false,
-                "args": "${auto-detect-url}",
-                "windows": {
-                    "command": "cmd.exe",
-                    "args": "/C start ${auto-detect-url}"
-                },
-                "osx": {
-                    "command": "open"
-                },
-                "linux": {
-                    "command": "xdg-open"
-                }
-            },
-            "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development",
-                "ASPNETCORE_URLS": "http://localhost:5003"
-            },
-            "sourceFileMap": {
-                "/Views": "${workspaceFolder}/Views"
-            }
+        "osx": {
+          "command": "open"
         },
-    ]
+        "linux": {
+          "command": "xdg-open"
+        }
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:5002"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    },
+    {
+      "name": ".NET(JS Client)",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/JSClient/bin/Debug/netcoreapp2.2/JSClient.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/JSClient",
+      "stopAtEntry": false,
+      "launchBrowser": {
+        "enabled": false,
+        "args": "${auto-detect-url}",
+        "windows": {
+          "command": "cmd.exe",
+          "args": "/C start ${auto-detect-url}"
+        },
+        "osx": {
+          "command": "open"
+        },
+        "linux": {
+          "command": "xdg-open"
+        }
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:5003"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    }
+  ]
 }
